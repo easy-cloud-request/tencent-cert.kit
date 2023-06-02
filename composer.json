@@ -1,0 +1,41 @@
+{
+    "name": "easy-cloud-request/tencent-cert.kit",
+    "authors": [
+        {
+            "name": "zhanghuide",
+            "email": "iamhuide@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EasyCloudRequest\\TencentCert\\": "src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "easy-cloud-request/tencent": "^0.0.1",
+        "symfony/console": "^5.4"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1 --rules=@PSR2",
+        "test": "phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 0 $1"
+    },
+    "config": {
+        "secure-http": false
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.superdalan.com"
+        }
+    ],
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "phpstan/phpstan": "^1.10"
+    }
+}
